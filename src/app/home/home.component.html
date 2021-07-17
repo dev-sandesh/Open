@@ -1,0 +1,150 @@
+<div class="home-wrapper">
+  <div class="navbar-wrapper" [ngClass]="{ sticky: isSticky }">
+    <div class="navbar d-flex">
+      <div class="logo-wrapper">
+        <div class="logo">
+          <img src="assets/logo.png" srcset="assets/logo@2x.png" />
+        </div>
+      </div>
+      <div class="items-wrapper d-flex">
+        <div class="anchor-items">
+          <span class="items">Products</span>
+          <span class="items">Solutions</span>
+          <span class="items">Pricing</span>
+        </div>
+        <div class="buttons-wrapper d-flex">
+          <div class="login-button">
+            <button class="login">Login</button>
+          </div>
+          <div class="start-button">
+            <button class="started">Get Started</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content-wrapper d-flex">
+    <div class="left-content">
+      <div class="blob-wrapper">
+        <div class="blob-img">
+          <img src="assets/blob-small.svg" />
+        </div>
+        <div class="blob-content">
+          We make it Super Simple
+          <div class="border"></div>
+        </div>
+        <div class="video-img">
+          <img src="assets/video.png" srcset="assets/video@2x.png" />
+          <div class="dots-wrapper">
+            <img src="assets/dots.svg" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right-content">
+      <div class="right-blob">
+        <img src="assets/circle.svg" />
+      </div>
+      <div class="eligibility-wrapper">
+        <div class="calculator">
+          <div class="header">
+            <h2>Eligibility Criteria</h2>
+          </div>
+          <div class="calculator-form">
+            <div class="form-item">
+              <h5>Monthly Income</h5>
+              <div class="slider">
+                <div>{{ monthlyIncome | currency: "INR" }}</div>
+                <input
+                  type="range"
+                  id="range"
+                  min="100000"
+                  max="300000"
+                  #income
+                  (input)="updateIncome(income.value, 'income')"
+                />
+                <div class="range-indicator">
+                  <span>100000</span>
+                  <span>300000</span>
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <h5>Monthly Expenses</h5>
+              <div class="slider">
+                <div>{{ monthlyExpense | currency: "INR" }}</div>
+                <input
+                  type="range"
+                  id="range"
+                  min="100000"
+                  max="300000"
+                  #expense
+                  (input)="updateIncome(expense.value, 'expense')"
+                />
+              </div>
+            </div>
+            <div class="form-item">
+              <h5>Repayment Tenure</h5>
+              <select name="month">
+                <option *ngFor="let month of months" [value]="month.id">
+                  {{ month.name }}
+                </option>
+              </select>
+            </div>
+            <div class="form-item toggle">
+              <h5>Do you have any existing loan ?</h5>
+              <div class="switch">
+                <input type="checkbox" id="toggleAll" />
+                <label for="toggleAll"></label>
+              </div>
+            </div>
+            <div class="form-item">
+              <h5>EMI of existing loans(optional)</h5>
+              <input type="text" placeholder="₹15,000" />
+            </div>
+          </div>
+        </div>
+        <div class="loan-wrapper">
+          <div class="loan">
+            <div class="loan-content">
+              <div class="loan-item">
+                <h4>Loan Amount</h4>
+                <h3>{{ monthlyIncome | currency: "INR" }}</h3>
+              </div>
+              <div class="loan-item">
+                <h4>Your EMI will be</h4>
+                <h3>₹15,000</h3>
+              </div>
+              <div class="submit loan-item">
+                <button class="submit">Get Money</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dots-wrapper">
+          <img src="assets/dots.svg" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="features-wrapper"
+    [style.background-image]="'url(/assets/wave.svg)'"
+  >
+    <div class="features">
+      <div *ngFor="let data of featuresData" class="feature-card">
+        <app-card-component [data]="data"></app-card-component>
+      </div>
+    </div>
+    <div class="features-content">
+      <h1>Boost your business with Open</h1>
+      <div class="border"></div>
+      <div class="content">
+        Get your hands on a term loan that’s crafted for your business
+      </div>
+      <div class="open-ac">
+        <button class="account">Get an Open Account</button>
+      </div>
+    </div>
+  </div>
+</div>

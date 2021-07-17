@@ -1,0 +1,14 @@
+.card-wrapper {
+  width: 350px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  padding: 20px;
+  border-radius: 24px;
+  &:hover {
+    background: #663399;
+    cursor: pointer;
+    color: #fff;
+  }
+  p {
+    color: #999999;
+  }
+}
