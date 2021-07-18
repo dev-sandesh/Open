@@ -1,27 +1,16 @@
 # Open
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
+This project is built with Angular version 12.1.2 and Node.js version 14.17.3.
 
-## Development server
+# Setting up the Project
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Clone the project from github. 
+Run npm install (make sure you have Node.js installed).
+Run ng serve to start the local server.
+Open "localhost:4200" to run the project.
 
-## Code scaffolding
+# Screenshot 1
+![image](https://user-images.githubusercontent.com/17668148/126057298-40175704-2ba0-4465-9475-8116ff225aa5.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Screenshot 2
+![image](https://user-images.githubusercontent.com/17668148/126057318-c9014e27-be40-4e25-aafd-19a75ae3dc41.png)
